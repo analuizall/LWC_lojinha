@@ -1,0 +1,53 @@
+<template>
+
+	<div class="slds-card">
+		<table style="border: 1px solid black" align="center">
+				<tr> 
+					  <td>
+							<img src="https://m.media-amazon.com/images/I/81jDDfaIjVL._AC_SY445_.jpg" height="20px" width="50px"/>
+						</td>
+						<td  colspan="2">
+								<h1 align="center" > Minha Lojinha</h1>
+						</td>
+				</tr>
+		</table>
+		</div>	
+
+		<!--
+		<div class="slds-card">
+			Preto: {isMochilaPreto}<br/>
+			Marrom: {isMochilaMarrom}<br/>
+			Roxo: {isMochilaVermelha}
+
+		</div>
+		-->
+		<div class="slds-card">
+				<span class="nomeProduto"> Mochila   </span>
+        <span class="nomeProduto"> R$280,00 </span>
+                
+        <lightning-button variant="brand" label="Marrom" onclick={mochilaMarrom}  class="slds-m-left_x-small">
+        </lightning-button>
+       <lightning-button variant="brand" label="Preto" onclick={mochilaPreto} class="slds-m-left_x-small">
+        </lightning-button>
+        <lightning-button variant="brand" label="Vermelha" onclick={mochilaVermelha} class="slds-m-left_x-small">
+        </lightning-button>
+
+
+                <!-- Essa imagem só deve aparecer quando isViolaoMarrom for verdade -->
+                <!-- if true > Só vai aparecer se a variavel for verdadeira  -->
+                <template if:true={isMochilaMarrom}>
+                <img src="https://img.irroba.com.br/fit-in/600x600/filters:fill(fff):quality(95)/largadao/catalog/mochilas/tron/tron-whisly.jpg" height="150px" width="140px"/>
+                </template>
+
+                <template if:true={isMochilaPreto}>
+                <img src="https://images.tcdn.com.br/img/img_prod/708997/mochila_notebook_hub_universitaria_trabalho_em_pu_c_cadeado_1133_1_20191206162643.jpg" height="150px" width="140px"/>
+                </template>
+
+                <template if:true={isMochilaVermelha}>
+                <img src="https://images-americanas.b2w.io/produtos/01/00/img/1447845/8/1447845851_1GG.jpg" height="150px" width="140px"/>
+                </template>
+				
+		</div>
+
+		
+</template>
